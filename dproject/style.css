@@ -75,12 +75,11 @@ a {
   justify-content: space-between;
   align-items: center;
 
-  padding: 0 0 100px;
+  margin-bottom: 100px;
 }
 
 .logo-img {
   width: 180px;
-  height: 45px;
 }
 
 .burger-menu-lines {
@@ -165,16 +164,15 @@ a {
 
 .popup-form {
   width: 390px;
-  height: 589px;
   background-color: #ffffff;
   padding: 50px 30px;
   box-sizing: border-box;
   position: relative;
 }
 
-.popup-form::after {
-  content: "";
-  display: block;
+.popup-close {
+  border: none;
+  background-color: transparent;
   position: absolute;
   top: -25px;
   right: 0;
@@ -182,6 +180,9 @@ a {
   height: 18px;
 
   background-image: url("svg/form-x.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 .title-form {
@@ -319,7 +320,7 @@ a {
   align-items: flex-end;
   justify-content: center;
   width: 25%;
-  height: 319px;
+  min-height: 319px;
   background-color: #eff6f1;
   background-repeat: no-repeat;
   background-size: cover;
@@ -328,6 +329,7 @@ a {
   position: relative;
   z-index: 1;
 
+  padding: 10px;
   box-sizing: border-box;
 }
 
@@ -359,7 +361,6 @@ a {
 }
 
 .trends-card-content {
-  width: 70%;
   padding: 35px;
   border: 3px solid #b59f5b;
   margin-bottom: 15px;
@@ -412,13 +413,11 @@ a {
 
 .card-contetn {
   margin: -5px 0 0 30px;
-  width: 367px;
 }
 
 .card-img {
   background-color: #eff5f1;
   width: 381px;
-  height: 294px;
 }
 
 .card-list {
@@ -451,8 +450,6 @@ a {
   text-transform: uppercase;
   color: #0f0d0e;
   font-weight: 700;
-
-  width: 347px;
 
   transition: color linear 0.1s;
 }
@@ -638,7 +635,6 @@ a {
 }
 
 .tag-item {
-  height: 30px;
   border: 3px solid #eeeeee;
   padding: 0 13px;
 
@@ -662,8 +658,8 @@ a {
 
 .tems-item {
   width: 100%;
-  height: 46px;
   border-bottom: 1px solid #eeeeee;
+  padding: 5px 0;
 
   display: flex;
   align-items: center;
@@ -842,7 +838,7 @@ a {
 }
 
 @media (max-width: 1200px) {
-  .popup-form::after {
+  .popup-close {
     width: 27px;
     height: 27px;
     top: -35px;
@@ -867,7 +863,7 @@ a {
 
   .trends-card {
     width: calc(50% - 4px);
-    height: 247px;
+    min-height: 247px;
   }
 
   .main {
@@ -885,7 +881,6 @@ a {
 
   .card-img {
     width: 392px;
-    height: 302px;
   }
 
   .card-title {
@@ -950,32 +945,42 @@ a {
   }
 
   .card,
-  .card-contetn,
-  .card-title,
-  .aside {
-    width: 300px;
+  .aside,
+  .shop-card {
+    width: 100%;
+  }
+
+  .aside-content-box {
+    flex-direction: column;
   }
 
   .card-title {
     font-size: 16px;
   }
 
-  .card-text {
-    font-size: 14px;
+  .card-img {
+    width: 100%;
   }
 
-  .card-img {
-    width: 300px;
-    height: 253px;
+  .card-text {
+    font-size: 14px;
   }
 
   .shop-box {
     align-items: center;
   }
 
+  .shop-content {
+    max-width: 100%;
+  }
+
+  .shop-img {
+    max-width: 100%;
+    height: auto;
+  }
+
   .popup-form {
     width: 331px;
-    height: 546px;
   }
 
   .title-form {
